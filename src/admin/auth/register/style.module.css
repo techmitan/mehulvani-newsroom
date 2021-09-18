@@ -1,0 +1,42 @@
+.login_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login_wrapper h2 {
+  color: blueviolet;
+  margin-bottom: 30px;
+}
+
+.login_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_box p {
+  margin-bottom: 10px;
+}
+
+.login_box input {
+  margin-bottom: 10px;
+  width: 300px;
+  padding: 7px;
+  font-size: 16px;
+}
+
+.btn button{
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  background-color: blueviolet;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  margin-bottom: 40px;
+}

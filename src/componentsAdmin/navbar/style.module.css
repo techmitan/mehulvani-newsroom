@@ -1,0 +1,45 @@
+.navbar{
+    background-color: white;
+    padding: 10px;
+    position: sticky;
+    top:0;
+    border-bottom: 2px solid purple;
+    z-index: 1000;
+
+}
+
+.nav_container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_left{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.ham{
+    display: none;
+}
+
+
+.logo img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px){
+    .nav_container{
+        width: 95%;
+    }
+
+    .ham{
+        display: inline-block;
+    }
+
+
+}

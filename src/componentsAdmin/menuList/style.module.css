@@ -1,0 +1,11 @@
+.menubar ul {
+    list-style-type: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.menubar ul li{
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+}

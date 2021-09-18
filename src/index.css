@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+img{
+  width:100%;
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: #333333;
+}
+
+a:hover{
+  color: blueviolet;
+}
+
+a:active{
+  color: blueviolet;
+}
+
+.ql-editor{
+  font-size: 16px;
+  min-height: 300px;
+}
+
+
+

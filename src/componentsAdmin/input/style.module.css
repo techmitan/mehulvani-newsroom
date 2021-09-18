@@ -1,0 +1,14 @@
+.input_area h4{
+    color: blueviolet;
+    margin-bottom: 10px;
+}
+
+.input_area{
+    margin: 20px auto;
+}
+
+.input_area input{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+}

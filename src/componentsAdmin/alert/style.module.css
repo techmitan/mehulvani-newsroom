@@ -1,0 +1,18 @@
+.success{
+    background-color: rgb(159, 206, 159);
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.error{
+    background-color: rgb(233, 180, 180);
+    color: rgb(117, 21, 21);
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}

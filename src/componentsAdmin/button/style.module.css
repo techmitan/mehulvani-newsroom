@@ -1,0 +1,23 @@
+.btn{
+    margin: 10px;
+}
+
+.btn button{
+    padding: 7px 15px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+
+.btn button:hover{
+    background-color: rgb(101, 30, 167);
+}
+
+.btnLoading button{
+    
+}

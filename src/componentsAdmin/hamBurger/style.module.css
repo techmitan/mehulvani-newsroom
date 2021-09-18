@@ -1,0 +1,14 @@
+.ham_menu{
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.close_icon{
+    margin: 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+}

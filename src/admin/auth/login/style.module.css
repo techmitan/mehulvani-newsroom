@@ -1,0 +1,24 @@
+.login_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+   
+}
+
+.login_wrapper h2{
+    color: blueviolet;
+    margin-bottom: 30px;
+}
+
+.login_box{
+    display: flex;
+    flex-direction: column;
+}
+
+.login_box p{
+    margin-bottom: 10px;
+}
+
+
+
