@@ -5,9 +5,11 @@ import ReactQuill, { Quill } from "react-quill";
 import ImageUploader from "quill-image-uploader";
 import 'react-quill/dist/quill.snow.css'; // ES6
 
+
+
 Quill.register("modules/imageUploader", ImageUploader);
 
-const Editor = ({ editorRef }) => {
+const Editor = ({ editorRef, value, onChange }) => {
   let modules = useMemo(() => ({
     toolbar: [
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -43,7 +45,13 @@ const Editor = ({ editorRef }) => {
 
   return (
     <>
-      <ReactQuill theme="snow" modules={modules} ref={editorRef}></ReactQuill>
+      <ReactQuill
+        theme="snow"
+        modules={modules}
+        ref={editorRef}
+        defaultValue={value}
+        onChange={onChange}
+      ></ReactQuill>
     </>
   );
 };

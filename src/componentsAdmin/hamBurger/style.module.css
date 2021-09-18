@@ -5,10 +5,12 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 1000;
 }
 
 .close_icon{
     margin: 10px 10px;
     display: flex;
     justify-content: flex-end;
+    color: white;
 }

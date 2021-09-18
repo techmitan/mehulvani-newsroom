@@ -11,8 +11,7 @@ const MenuList = () => {
       <ul>
         {(user.role === "admin" || user.role === "reporter") && (
           <>
-           
-            <a href="http://cg24x7.news" target="_blank">
+            <a href="https://mehulvani.in" target="_blank">
               <li>Visit Site</li>
             </a>
             <Link to="/dashboard">
@@ -26,7 +25,7 @@ const MenuList = () => {
             </Link>
             <Link to="/dashboard/my-profile">
               <li>My Profile</li>
-            </Link>{" "}
+            </Link>
           </>
         )}
 

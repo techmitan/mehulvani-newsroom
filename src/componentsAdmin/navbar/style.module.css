@@ -19,16 +19,15 @@
 .nav_left{
     display: flex;
     align-items: center;
-    gap:10px;
+    gap:7px;
 }
 
 .ham{
     display: none;
 }
 
-
 .logo img{
-    width: 100px;
+    width: 120px;
     margin-right: 10px;
 }
 

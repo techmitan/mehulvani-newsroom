@@ -3,12 +3,11 @@ import ScrollToTopOnMount from "./scrollTop";
 
 // admin
 import Dashboard from "./admin/home";
-import CreateNews from "./admin/create-news";
 import AddNews from "./admin/addNews";
+import EditNews from "./admin/edit-news";
 import ManageCategory from "./admin/category";
 import Advertisement from "./admin/advertisement";
 import AdvertisementID from "./admin/advertisementID";
-import EditNews from "./admin/edit-news";
 import MyNews from "./admin/my-news";
 import AllNews from "./admin/all-news";
 import Reporters from "./admin/reporters";
@@ -27,7 +26,6 @@ import { refreshAuth } from "./store/auth.slice";
 import AdminRoute from "./routes/adminRoute";
 import ReporterRoute from "./routes/reporterRoute";
 
-
 function App() {
   //refresh-auth
   const refreshingAuth = useSelector((state) => state.auth.refreshingAuth);
@@ -43,7 +41,6 @@ function App() {
     }
   }, [dispatch, token]);
 
-  
   //if token is there in LS, means a user is signed in.
   if (refreshingAuth && token) {
     return (
@@ -80,9 +77,6 @@ function App() {
             <Dashboard />
           </ReporterRoute>
 
-          {/* <ReporterRoute path="/dashboard/create-news">
-            <CreateNews />
-          </ReporterRoute> */}
           <ReporterRoute path="/dashboard/create-news">
             <AddNews />
           </ReporterRoute>

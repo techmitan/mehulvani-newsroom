@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { baseAPI } from "../../config";
 import Layout from "../../componentsAdmin/layout";
-import Editor from "../../componentsAdmin/editor";
+// import Editor from "../../componentsAdmin/editor";
+import TinyEditor from "../../componentsAdmin/tinyEditor";
 import { TextField } from "@material-ui/core";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -18,7 +19,6 @@ import {
 } from "@material-ui/pickers";
 import Upload from "./upload";
 
-
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 
@@ -26,7 +26,6 @@ const AddNews = () => {
   const history = useHistory();
 
   const user = useSelector((state) => state.auth.user);
-
 
   const [error, setError] = useState(false);
   const editorRef = useRef(null);
@@ -53,10 +52,10 @@ const AddNews = () => {
     setCategories(data.categories);
   };
 
+  
   useEffect(() => {
     getCategories();
   }, []);
-
 
   const sendNewsHandler = (status) => {
     setSending(true);
@@ -67,7 +66,7 @@ const AddNews = () => {
     newsData.append("location", locationRef.current.value);
     newsData.append("image", image);
     newsData.append("published_date", publishedDate);
-    newsData.append("content", editorRef.current.state.value);
+    newsData.append("content", editorRef.current.getContent());
     newsData.append("author", user._id);
     newsData.append("status", status);
 
@@ -129,6 +128,7 @@ const AddNews = () => {
         Select News Category
       </InputLabel>
       <Select
+        fullWidth
         labelId="demo-simple-select-outlined-label"
         id="demo-simple-select-outlined"
         value={category}
@@ -155,9 +155,16 @@ const AddNews = () => {
         inputRef={locationRef}
       />
 
-      <h4>News Article</h4>
+      {/* <h4>News Article</h4>
 
       <Editor editorRef={editorRef} />
+
+      <div style={{ marginBottom: "30px" }}></div> */}
+
+      <h4>News Article</h4>
+
+      <TinyEditor editorRef={editorRef }/>
+
       <div style={{ marginBottom: "30px" }}></div>
 
       <div>
