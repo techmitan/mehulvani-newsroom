@@ -25,6 +25,8 @@ import Upload from "./upload";
 import { useState, useEffect, useRef } from "react";
 import { useHistory, useParams } from "react-router";
 
+import QEditor from "../../componentsAdmin/qEditor";
+
 const EditNews = () => {
   const history = useHistory();
   const { id } = useParams();
@@ -82,7 +84,7 @@ const EditNews = () => {
     newsData.append("category", category);
     newsData.append("location", locationRef.current.value);
     newsData.append("published_date", publishedDate);
-    newsData.append("content", editorRef.current.getContent());
+    newsData.append("content", editorRef.current.state.value);
     newsData.append("isPublished", status);
 
     if (imageChanged) {
@@ -113,7 +115,6 @@ const EditNews = () => {
     };
     sendNewsAPI();
   };
-
 
   const imageHandler = (e) => {
     setImage(e.target.files[0]);
@@ -219,7 +220,9 @@ const EditNews = () => {
 
           <h4>News Article</h4>
 
-          <TinyEditor editorRef={editorRef} value={content} />
+          {/* <TinyEditor editorRef={editorRef} value={content} /> */}
+
+          <QEditor editorRef={editorRef} value={content} />
 
           <div style={{ marginBottom: "30px" }}></div>
 

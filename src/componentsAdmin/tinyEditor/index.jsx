@@ -1,15 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 
 export default function TinyEditor({ editorRef, value }) {
-  //   const editorRef = useRef(null);
-
-  //   const log = () => {
-  //     if (editorRef.current) {
-  //       console.log(editorRef.current.getContent());
-  //     }
-  //   };
-
   return (
     <>
       <Editor
@@ -20,7 +12,7 @@ export default function TinyEditor({ editorRef, value }) {
           height: 350,
           menubar: false,
           plugins: [
-            "advlist autolink lists link charmap print preview anchor",
+            "advlist lists link charmap print preview anchor",
             "searchreplace visualblocks code fullscreen",
             "insertdatetime media table paste code help wordcount",
           ],

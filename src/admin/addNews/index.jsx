@@ -18,6 +18,7 @@ import {
   KeyboardDatePicker,
 } from "@material-ui/pickers";
 import Upload from "./upload";
+import QEditor from "../../componentsAdmin/qEditor";
 
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
@@ -52,7 +53,6 @@ const AddNews = () => {
     setCategories(data.categories);
   };
 
-  
   useEffect(() => {
     getCategories();
   }, []);
@@ -66,7 +66,7 @@ const AddNews = () => {
     newsData.append("location", locationRef.current.value);
     newsData.append("image", image);
     newsData.append("published_date", publishedDate);
-    newsData.append("content", editorRef.current.getContent());
+    newsData.append("content", editorRef.current.state.value);
     newsData.append("author", user._id);
     newsData.append("status", status);
 
@@ -163,7 +163,9 @@ const AddNews = () => {
 
       <h4>News Article</h4>
 
-      <TinyEditor editorRef={editorRef }/>
+      {/* <TinyEditor editorRef={editorRef} /> */}
+
+      <QEditor editorRef={editorRef} />
 
       <div style={{ marginBottom: "30px" }}></div>
 

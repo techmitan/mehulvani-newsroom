@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <Layout>
       <h1>Hello, {user.full_name}</h1>
-      <h2>Welcome to CG24x7 News Portal</h2>
+      <h2>Welcome to mehulvani newsroom!</h2>
     </Layout>
   );
 };
