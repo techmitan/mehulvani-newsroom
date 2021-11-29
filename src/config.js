@@ -1,3 +1,3 @@
 module.exports = {
-  baseAPI: "https://api.mehulvani.in",
+  baseAPI: "https://mehulvani.herokuapp.com",
 };
