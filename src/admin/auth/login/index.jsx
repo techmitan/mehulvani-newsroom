@@ -21,7 +21,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
-        cg24x7 News
+        mehulvani.in
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
